@@ -1,0 +1,353 @@
+/*
+Theme Name: Nimva Child
+Template: nimva
+Description: Nimva Child Theme.
+Author: RockyThemes
+Theme URI: http://rockythemes.com/nimva/
+Author URI: http://rockythemes.com
+Version: 99
+License: GNU General Public License
+License URI: license.txt
+*/
+
+$c-primary: #71b3e2;
+$c-secondary: #71b3e2;
+
+#header {
+  padding: 1em 0 !important;
+}
+
+.arrowhead {
+  @media (min-width: 1000px) {
+    background-image: url('/wp-content/themes/nimva-child/arrow.png');
+    background-position: left center;
+    background-size: 460px;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+  }
+
+}
+
+.tight {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.frame {
+  padding-bottom: 50%;
+  border-radius: 3px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  grid-gap: 20px;
+
+  &__frame {
+    padding-bottom: 200px;
+    border-radius: 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+    h4 {
+      font-weight: bold;
+      margin-top: 8px;
+      min-height: 68px;
+    }
+    h4, p {
+      text-align: center !important;
+      background-color: #f8f8f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .btn {
+      display: block;
+      margin: 0 auto;
+      border-color: $c-primary;
+      background-color: $c-primary;
+      color: white !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      position: relative;
+      top: -1px;
+
+      &:hover {
+        border-color: $c-secondary;
+        color: white !important;
+        background-color: $c-primary;
+      }
+      // font-weight: bold;
+    }
+  }
+}
+.btn {
+  display: table;
+  margin: 0 auto;
+  border-color: $c-primary !important;
+  color: $c-primary !important;
+
+  &--dark {
+    background-color: $c-primary;
+    color: white !important
+  }
+
+  &:hover {
+    border-color: $c-secondary !important;
+    color: $c-secondary !important;
+  }
+  // font-weight: bold;
+
+  &-holder {
+    text-align: center;
+  }
+}
+
+
+#page-title {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:after {
+    position: absolute;
+    background-color: rgba(16,20,49, .9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }
+
+  &--color {
+    background-color: rgba(16,20,49, .2);
+  }
+  .error404-meta input[type="submit"], .searchtop-meta input[type="submit"] {
+    background-color: $c-secondary !important;
+  }
+}
+
+.page-title {
+  &--color {
+    background-color: rgba(16,20,49, .8) !important;
+    &:after {
+      content: "" !important;
+      // background-image: url('/wp-content/uploads/2021/06/shapes3.png');
+      background-size: cover;
+          background-repeat: no-repeat;
+          opacity: .1;
+          display: block;
+          background-position: bottom;
+          background-attachment: fixed;
+    }
+  }
+}
+.page_title_inner {
+  background-color: transparent !important;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  h2 {
+    font-weight: bold;
+  }
+  h2, a, li {
+    color: white !important;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      // display: flex;
+      align-items: center;
+
+      .breadcrumbs {
+        // position: relative;
+        // top: -2px;
+        // left: 12px;
+        // margin-top: 0 !important;
+        li, a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+.gform_body {
+  input[type='text'], input[type='email'], input[type='tel'], select {
+    width: 100% !important;
+    padding: .5em !important;
+  }
+}
+
+
+input.gform_button {
+background-color: $c-primary !important;
+color: white !important;
+border: none !important;
+&:hover {
+  border-color: $c-secondary !important;
+  color: white !important;
+}
+}
+
+
+#top-menu li a:hover, #top-menus li a:hover {
+  color: $c-primary !important;
+  border-color: $c-primary !important;
+}
+
+#header nav .sf-menu li.current-menu-ancestor > a, #header nav .sf-menu li ul {
+  // border-color: $c-primary !important;
+  border: none;
+}
+
+.cta {
+  padding: 32px 0;
+  background-color: $c-secondary;
+  * {
+    color: white;
+
+  }
+  .btn {
+    background-color: white;
+    border: none;
+  }
+
+}
+
+.normal {
+  max-width: 1170px;
+  margin: 0 auto !important;
+}
+
+.blurred {
+  &:after {
+    background-color: rgba(0,0,0,.5);
+    content: "";
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  padding: 2em 0;
+
+  &__form {
+    background-color: rgba(255,255,255,.4);
+    border-radius: 3px;
+    label, legend {
+      color: white;
+    }
+    .gfield_required {
+      display: none !important;
+    }
+  }
+
+  &__header {
+    color: white;
+    font-size: 1.4em;
+  }
+  &__subheader {
+    color: white;
+    font-size: .9em;
+    margin-top: 1em;
+  }
+}
+
+#input_4_3 {
+  display: none;
+}
+
+
+.product-feature-wrap .featured {
+  display: block;
+}
+
+.service_box {
+  h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  margin-bottom: 24px !important;
+  > div {
+      background-color: #f8f8f8;
+      padding: 2em;
+  }
+
+}
+
+.btn {
+  &--center {
+    justify-content: center;
+    display: flex !important;
+    width: fit-content;
+  }
+}
+
+.greenwhite {
+  * {
+    // text-align: center !important;
+  }
+
+  &:after {
+    content: "";
+    background-image: url('/wp-content/themes/nimva-child/c.png');
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-attachment: scroll;
+    display: block !important;
+    opacity: .1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  * {
+    // color: white;
+  }
+  .btn {
+    // color: white !important;
+    // border-color: white !important;
+  }
+}
+
+#copyrights.copyrights-dark {
+  // background-color: $c-primary !important;
+}
+
+#logo {
+  display: flex;
+}
+.page-header--image {
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  background-size: cover;
+
+  h1 {
+    color: white;
+  }
+
+  &:before {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block !important;
+    content: '';
+  }
+}
